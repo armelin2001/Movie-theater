@@ -43,3 +43,5 @@ C:\Users\MSAD\Desktop\Repositorio visual\MovieTheater\obj\Debug\netcoreapp3.1\Mo
 C:\Users\MSAD\Desktop\Repositorio visual\MovieTheater\obj\Debug\netcoreapp3.1\MovieTheater.csproj.CopyComplete
 C:\Users\MSAD\Desktop\Repositorio visual\MovieTheater\obj\Debug\netcoreapp3.1\MovieTheater.dll
 C:\Users\MSAD\Desktop\Repositorio visual\MovieTheater\obj\Debug\netcoreapp3.1\MovieTheater.pdb
+C:\Users\MSAD\Desktop\Repositorio visual\MovieTheater\obj\Debug\netcoreapp3.1\Razor\Views\Movie\NewMovieForm.cshtml.g.cs
+C:\Users\MSAD\Desktop\Repositorio visual\MovieTheater\obj\Debug\netcoreapp3.1\Razor\Views\Movie\ShowDetailsMovie.cshtml.g.cs

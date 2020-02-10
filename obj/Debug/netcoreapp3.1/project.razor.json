@@ -20506,6 +20506,16 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\MSAD\\Desktop\\Repositorio visual\\MovieTheater\\Views\\Movie\\NewMovieForm.cshtml",
+      "TargetPath": "Views\\Movie\\NewMovieForm.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\MSAD\\Desktop\\Repositorio visual\\MovieTheater\\Views\\Movie\\ShowDetailsMovie.cshtml",
+      "TargetPath": "Views\\Movie\\ShowDetailsMovie.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\MSAD\\Desktop\\Repositorio visual\\MovieTheater\\Views\\Shared\\Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"

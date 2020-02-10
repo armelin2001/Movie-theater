@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using MovieTheater.Repository;
 using MovieTheater.Models;
 
 namespace MovieTheater.Controllers
@@ -12,15 +13,16 @@ namespace MovieTheater.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private readonly RepositoryMovie _repositoryMovie;
+        public HomeController(ILogger<HomeController> logger, RepositoryMovie movieRepo)
         {
             _logger = logger;
+            _repositoryMovie = movieRepo;
         }
 
         public IActionResult Index()
         {
-            return View();
+            return View(_repositoryMovie.ListAllMovies());
         }
 
         public IActionResult Privacy()
