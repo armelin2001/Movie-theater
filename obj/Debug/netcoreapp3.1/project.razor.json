@@ -20511,8 +20511,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\MSAD\\Desktop\\Repositorio visual\\MovieTheater\\Views\\Movie\\ShowDetailsMovie.cshtml",
-      "TargetPath": "Views\\Movie\\ShowDetailsMovie.cshtml",
+      "FilePath": "c:\\Users\\MSAD\\Desktop\\Repositorio visual\\MovieTheater\\Views\\Movie\\DetailsMovie.cshtml",
+      "TargetPath": "Views\\Movie\\DetailsMovie.cshtml",
       "FileKind": "mvc"
     },
     {

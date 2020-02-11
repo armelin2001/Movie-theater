@@ -37,14 +37,14 @@ namespace MovieTheater.Controllers
             movieRepository.Delete(movie);
             return Redirect("../Home/Index");//redirect a home page
         }
-        public IActionResult DetailsId(int id){
+        public IActionResult DetailsMovie(int id){//This method will take the id how was passed in url
             var movie = movieRepository.FindMovie(id);
-            return View(movie);//redirect to a new page who will contain a descrition about movie
+            return View(movie);//return a id who will contain the object id
 
         }
         [HttpPost]
-        public IActionResult ShowDetailsMovie(Movie movieDetail){
-            movieRepository.Details(movieDetail);
+        public IActionResult DetailsMovie(Movie movieDetail){
+            movieRepository.DetailsRepository(movieDetail);
             return View();
         }
 

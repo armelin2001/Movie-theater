@@ -41,7 +41,7 @@ namespace MovieTheater.Repository
             database.Movies.Remove(deleteMovie);
             database.SaveChanges();
         }
-        public void Details(Movie movie){
+        public void DetailsRepository(Movie movie){
             database.Movies.Find(movie);
         }
     }
