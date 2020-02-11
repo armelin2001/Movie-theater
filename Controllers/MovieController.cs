@@ -25,17 +25,15 @@ namespace MovieTheater.Controllers
         [HttpPost]
         public ActionResult NewMovie(Movie movie){
             movieRepository.AddMovie(movie);
-            return Redirect("../Home/Index");//return to home page
+            return RedirectToAction("Index","Home");//return to home page
         }
         public IActionResult ShowMovies(){
             return View(movieRepository.ListAllMovies());//show all movies in home page
         }
-
-        [HttpDelete]
         public ActionResult DeleteMovie(int id){
             var movie = movieRepository.FindMovie(id);
             movieRepository.Delete(movie);
-            return Redirect("../Home/Index");//redirect a home page
+            return RedirectToAction("Index","Home");//redirect a home page
         }
         public IActionResult DetailsMovie(int id){//This method will take the id how was passed in url
             var movie = movieRepository.FindMovie(id);
@@ -47,6 +45,15 @@ namespace MovieTheater.Controllers
             movieRepository.DetailsRepository(movieDetail);
             return View();
         }
-
+        [HttpGet]
+        public IActionResult EditMovie(int id){
+            var movieEdit= movieRepository.FindMovie(id);
+            return View(movieEdit);
+        }
+        [HttpPost]
+        public IActionResult EditMovie(Movie movieEd){
+            movieRepository.Edit(movieEd);
+            return RedirectToAction("Index","Home");
+        }
     }
 }
