@@ -24,8 +24,13 @@ namespace MovieTheater.Controllers
         }
         [HttpPost]
         public ActionResult NewMovie(Movie movie){
-            movieRepository.AddMovie(movie);
-            return RedirectToAction("Index","Home");//return to home page
+            if(ModelState.IsValid){
+                movieRepository.AddMovie(movie);
+                return RedirectToAction("Index","Home");//return to home page
+            }
+            else{
+                return View("NewMovieForm");
+            }        
         }
         public IActionResult ShowMovies(){
             return View(movieRepository.ListAllMovies());//show all movies in home page
