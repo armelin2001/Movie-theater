@@ -11,10 +11,10 @@ namespace MovieTheater.Models
         public int Id{get;set;}
         [Required]
         [MinLength(5,ErrorMessage="The movie name is to short")]
-        public string movieName{get;set;}
+        public string MovieName{get;set;}
         [Required]
         [MinLength(3,ErrorMessage="The movie type is to short")]
-        public string type{get;set;}
+        public string Type{get;set;}
         [Required]
         [Range(0,double.MaxValue,ErrorMessage="The movie duration need be bigger then 0")]
         public double Duration{get;set;}

@@ -8,10 +8,10 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model=>model.movieName)
+                @Html.DisplayNameFor(model=>model.MovieName)
             </th>
             <th>
-                @Html.DisplayNameFor(model=>model.type)
+                @Html.DisplayNameFor(model=>model.Type)
             </th>
             <th>
                 @Html.DisplayNameFor(model=>model.Duration)
@@ -31,11 +31,11 @@
         @foreach(var item in Model){
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem=>item.movieName)
+                    @Html.DisplayFor(modelItem=>item.MovieName)
                 </td>
             
                 <td>
-                    @Html.DisplayFor(modelItem=>item.type)
+                    @Html.DisplayFor(modelItem=>item.Type)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem=>item.Duration)

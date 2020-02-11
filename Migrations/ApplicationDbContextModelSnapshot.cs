@@ -23,10 +23,15 @@ namespace MovieTheater.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Director")
+                        .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<double>("Duration")
                         .HasColumnType("double");
+
+                    b.Property<string>("MovieName")
+                        .IsRequired()
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<float>("Price")
                         .HasColumnType("float");
@@ -34,10 +39,8 @@ namespace MovieTheater.Migrations
                     b.Property<double>("RelaseDateOf")
                         .HasColumnType("double");
 
-                    b.Property<string>("movieName")
-                        .HasColumnType("longtext CHARACTER SET utf8mb4");
-
-                    b.Property<string>("type")
+                    b.Property<string>("Type")
+                        .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.HasKey("Id");

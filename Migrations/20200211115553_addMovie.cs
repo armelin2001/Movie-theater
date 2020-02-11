@@ -13,10 +13,10 @@ namespace MovieTheater.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    movieName = table.Column<string>(nullable: true),
-                    type = table.Column<string>(nullable: true),
+                    MovieName = table.Column<string>(nullable: false),
+                    Type = table.Column<string>(nullable: false),
                     Duration = table.Column<double>(nullable: false),
-                    Director = table.Column<string>(nullable: true),
+                    Director = table.Column<string>(nullable: false),
                     Price = table.Column<float>(nullable: false),
                     RelaseDateOf = table.Column<double>(nullable: false)
                 },
