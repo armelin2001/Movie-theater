@@ -20544,11 +20544,6 @@
       "FilePath": "c:\\Users\\MSAD\\Desktop\\Repositorio visual\\MovieTheater\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\MSAD\\Desktop\\Repositorio visual\\MovieTheater\\Views\\Home\\Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
-      "FileKind": "mvc"
     }
   ],
   "SerializationFormat": "0.2"

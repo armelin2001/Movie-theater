@@ -9,23 +9,23 @@ namespace MovieTheater.Models
     public class Movie
     {
         public int Id{get;set;}
-        [Required]
-        [MinLength(5,ErrorMessage="The movie name is to short")]
+        [Required(ErrorMessage="The movie name is to short")]
+        [MinLength(5)]
         public string MovieName{get;set;}
-        [Required]
-        [MinLength(3,ErrorMessage="The movie type is to short")]
+        [Required(ErrorMessage="The movie type is to short")]
+        [MinLength(3)]
         public string Type{get;set;}
-        [Required]
-        [Range(0,double.MaxValue,ErrorMessage="The movie duration need be bigger then 0")]
+        [Required(ErrorMessage="The movie duration need be bigger then 0")]
+        [Range(0,double.MaxValue)]
         public double Duration{get;set;}
-        [Required]
-        [MinLength(3,ErrorMessage="The director name need be bigger then 3 charracters")]
+        [Required(ErrorMessage="The director name need be bigger then 3 charracters")]
+        [MinLength(3)]
         public string Director{get;set;}
-        [Required]
-        [Range(0,float.MaxValue,ErrorMessage="The ticket price need be more to 0")]
+        [Required(ErrorMessage="The ticket price need be more to 0")]
+        [Range(0,float.MaxValue)]
         public float Price{get;set;}
-        [Required]
-        [Range(0,double.MaxValue,ErrorMessage="Please put a correct date")]
+        [Required(ErrorMessage="Please put a correct date")]
+        [Range(0,double.MaxValue)]
         public double RelaseDateOf{get;set;}
     }
 }
