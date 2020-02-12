@@ -26,7 +26,7 @@ namespace MovieTheater
         {
             services.AddControllersWithViews();
             services.AddDbContext<ApplicationDbContext>(options=>options.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
-            services.AddTransient<RepositoryMovie>();
+            services.AddTransient<RepositoryMovie>();//injection the repositoryin startup
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

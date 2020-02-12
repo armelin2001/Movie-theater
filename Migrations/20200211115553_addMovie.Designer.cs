@@ -8,7 +8,7 @@ using MovieTheater.DataBase;
 namespace MovieTheater.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200207164103_addMovie")]
+    [Migration("20200211115553_addMovie")]
     partial class addMovie
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,10 +25,15 @@ namespace MovieTheater.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Director")
+                        .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<double>("Duration")
                         .HasColumnType("double");
+
+                    b.Property<string>("MovieName")
+                        .IsRequired()
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<float>("Price")
                         .HasColumnType("float");
@@ -36,10 +41,8 @@ namespace MovieTheater.Migrations
                     b.Property<double>("RelaseDateOf")
                         .HasColumnType("double");
 
-                    b.Property<string>("movieName")
-                        .HasColumnType("longtext CHARACTER SET utf8mb4");
-
-                    b.Property<string>("type")
+                    b.Property<string>("Type")
+                        .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.HasKey("Id");
