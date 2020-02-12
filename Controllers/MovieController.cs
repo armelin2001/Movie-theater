@@ -57,8 +57,14 @@ namespace MovieTheater.Controllers
         }
         [HttpPost]
         public IActionResult EditMovie(Movie movieEd){
-            movieRepository.Edit(movieEd);
+            if(ModelState.IsValid){
+                movieRepository.Edit(movieEd);
             return RedirectToAction("Index","Home");
+            }
+            else{
+                return View("EditMovie");
+            }
+            
         }
     }
 }
