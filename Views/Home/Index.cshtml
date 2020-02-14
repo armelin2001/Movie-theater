@@ -3,14 +3,14 @@
     ViewData["Title"] = "ShowMovies";
 }
 
-@section Css{
-    <link rel="stylesheet" href="~/css/NavBar.css"/>
-    <link rel="stylesheet" href="~/css/Index.css"/>
-}
+
 <div class="container">
-    <table class="table table-striped table-hover">
+    <table class="table table-striped table-hover ">
         <thead>
             <tr>
+                <th>
+
+                </th>
                 <th>
                     @Html.DisplayNameFor(model=>model.MovieName)
                 </th>
@@ -29,11 +29,22 @@
                 <th>
                     @Html.DisplayNameFor(model=>model.RelaseDateOf)
                 </th>
+                <th>
+                    
+                </th>
+                <th>
+                    Actions
+                </th>
+                <th>
+                    
+                </th>
             </tr>
         </thead>
             <tbody>
                 @foreach(var item in Model){
                     <tr>
+                        <td>
+                        </td>
                         <td>
                             @Html.DisplayFor(modelItem=>item.MovieName)
                         </td>
@@ -54,13 +65,16 @@
                             @Html.DisplayFor(modelItem=>item.RelaseDateOf)
                         </td>
                         <td>
-                            <a class="detais" asp-action="DetailsMovie" asp-controller="Movie" asp-route-id="@item.Id" title="Details"><i class="fa fa-pencil"></i></a>
-                            <a calss="settings"asp-action="EditMovie" asp-controller="Movie" asp-route-id="@item.Id" title="Edit"><i class="fa fa-wrench"></i></a>
-                        <a class="delete" asp-action="DeleteMovie" asp-controller="Movie" asp-route-id="@item.Id" title="Remove"><i class="fa fa-trash-o"></i></a>
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
+                            <a asp-action="DetailsMovie" asp-controller="Movie" asp-route-id="@item.Id">Details</a>
+                        </td>
+                        <td>
+                            <a calss="settings"asp-action="EditMovie" asp-controller="Movie" asp-route-id="@item.Id" title="Edit">Edit</a>
+                        </td>
+                        <td>
+                            <a class="delete" asp-action="DeleteMovie" asp-controller="Movie" asp-route-id="@item.Id" title="Remove">remo</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
 </div>
-

@@ -12,7 +12,7 @@ namespace MovieTheater.Models
         [Required(ErrorMessage="The movie name is to short")]
         [MinLength(5)]
         public string MovieName{get;set;}
-        [Required(ErrorMessage="The movie type is to short")]
+        [Required(ErrorMessage="The movie type needs to have more than 3 caracters")]
         [MinLength(3)]
         public string Type{get;set;}
         [Required(ErrorMessage="The movie duration need be bigger then 0")]
@@ -25,7 +25,9 @@ namespace MovieTheater.Models
         [Range(0,float.MaxValue)]
         public float Price{get;set;}
         [Required(ErrorMessage="Please put a correct date")]
-        [Range(0,double.MaxValue)]
-        public double RelaseDateOf{get;set;}
+        [DisplayFormat(DataFormatString="{0:dd/MM/yyyy}")]
+        [DataType(DataType.Date)]
+        [Display(Name="Relase data of")]
+        public DateTime RelaseDateOf{get;set;}
     }
 }

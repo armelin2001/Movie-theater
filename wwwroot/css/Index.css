@@ -1,8 +1,6 @@
 body {
-    color: #566787;
     background: #f5f5f5;
     font-family: sans-serif;
-    
 }
 .table-wrapper {
     background: #fff;
@@ -81,15 +79,6 @@ table.table td a {
 table.table td a:hover {
     color: #2196F3;
 }
-table.table td a.settings {
-    color: #2196F3;
-}
-table.table td a.delete {
-    color: #F44336;
-}
-table.table td a.detais {
-    color:  #00ccff;
-}
 
 table.table td i {
     font-size: 19px;
@@ -109,15 +98,7 @@ table.table .avatar {
 .text-success {
     color: #10c469;
 }
-.text-info {
-    color: #62c9e8;
-}
-.text-warning {
-    color: #FFC107;
-}
-.text-danger {
-    color: #ff5b5b;
-}
+
 .pagination {
     float: right;
     margin: 0 0 5px;
@@ -155,3 +136,4 @@ table.table .avatar {
     margin-top: 10px;
     font-size: 13px;
 }
+
