@@ -1,8 +1,80 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model IEnumerable<MovieTheater.Models.Movie>
+@{
+    ViewData["Title"] = "ShowMovies";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+<div class="container">
+    <table class="table table-striped table-hover ">
+        <thead>
+            <tr>
+                <th>
+
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model=>model.MovieName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model=>model.Type)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model=>model.Duration)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model=>model.Director)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model=>model.Price)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model=>model.RelaseDateOf)
+                </th>
+                <th>
+                    
+                </th>
+                <th>
+                    Actions
+                </th>
+                <th>
+                    
+                </th>
+            </tr>
+        </thead>
+            <tbody>
+                @foreach(var item in Model){
+                    <tr>
+                        <td>
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem=>item.MovieName)
+                        </td>
+                    
+                        <td>
+                            @Html.DisplayFor(modelItem=>item.Type)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem=>item.Duration)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem=>item.Director)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem=>item.Price)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem=>item.RelaseDateOf)
+                        </td>
+                        <td>
+                            <a asp-action="DetailsMovie" asp-controller="Movie" asp-route-id="@item.Id">Details</a>
+                        </td>
+                        <td>
+                            <a calss="settings"asp-action="EditMovie" asp-controller="Movie" asp-route-id="@item.Id" title="Edit">Edit</a>
+                        </td>
+                        <td>
+                            <a class="delete" asp-action="DeleteMovie" asp-controller="Movie" asp-route-id="@item.Id" title="Remove">remo</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
 </div>
